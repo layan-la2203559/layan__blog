@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+<header>
+    <center><h1>Contact Us</h1></center>
+    <center><p>We will do out best to get back to you as soon as we can</p></center>
+    
+</header>
+
+    <main>
+        <fieldset id="form">
+            <legend>Fill this form</legend>
+            <form action="contact-us.php" method="post">
+
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="enter your full name" required><br><br>    
+                </div>
+
+                <div class="form-group">                
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="\d{8}" placeholder="+974-###-##-###" required><br><br>
+                    </div>
+                    
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="your-email@example.com" required><br><br>       
+                </div>
+
+                <div class="form-group">
+                <!-- how to make it required???? -->
+                <lable for="gender">Gender:</lable>
+                <input type="radio" value="male" name="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" value="female" name="gender" id="female">
+                <label for="female">Female</label><br><br>
+                </div>
+                
+                
+                <div class="form-group">
+                    <lable for="DOB">Date Of Birth</lable>
+                    <input type="date" name="DOB" id="dateOfBirth" required><br><br>
+                </div>
+
+                <div class="form-group">
+                <!-- how to make it required???? -->
+                <label for="contact">Preferred Method of Contact: </label>
+                <label for="phone">Phone</label>
+                <input type="checkbox" name="contact" id="phone">
+                <label for="Email">Email</label>
+                <input type="checkbox" name="contact" id="Email"><br><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="rate">How do you rate our website? </label>
+                    <select name="rate" id="rate">
+                        <option value="Excellent">Excellent</option>
+                        <option value="Very Good" ">Very Good</option>
+                        <option value="Good" selected>Good</option>
+                        <option value="Poor">Poor</option>
+                    </select><br><br>
+                    <script>
+                        document.getElementById("rate").addEventListener("change", function() {
+                          let options = this.options;
+                          for (let i = 0; i < options.length; i++) {
+                            options[i].text = options[i].text.replace("✔ ", ""); // Remove old tick
+                          }
+                          options[this.selectedIndex].text = "✔ " + options[this.selectedIndex].text; // Add tick
+                        });
+                      </script>
+                </div>
+
+                <div class="form-group">
+                    <label for="Nationality">Nationality: </label>
+                    <select name="Nationality" id="Nationality">
+                        
+                        <optgroup label="Asia">
+                            <option value="Chinese">Chinese</option>
+                            <option value="Indian">Indian</option>
+                            <option value="Japanese">Japanese</option>
+                        </optgroup>
+    
+                        <optgroup label="Africa">
+                            <option value="Nigerian">Nigerian</option>
+                            <option value="Egyptian">Egyptian</option>
+                            <option value="South African">South African</option>
+                        </optgroup>
+    
+                        <optgroup label="Europe">
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                            <option value="Italian">Italian</option>
+                        </optgroup>
+                    </select>
+                    <br><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="Message">Message</label>
+                    <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Leave your message" required></textarea>
+                    <br><br>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+
+                
+
+            </form>
+        </fieldset>
+
+    </main>
+
+<br>
+    <a href="my College Journey.html">Home</a>
+<!-- 
+<form action=""></form>
+<fieldset> : like box it is something extra
+input type
+textarea 
+select: drop box
+lable: 
+button -->
+    
+</body>
+</html>
